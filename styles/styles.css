@@ -11,12 +11,12 @@ nav a {
 main {
     max-width: 840px;
 }
-main img{
+main img {
     width: 150px;
     height: auto;
-    border: gray;
+    border: 1px solid gray;
     padding: 2px;
-    box-shadow: #000000;
+    box-shadow: 0 0 30px #000000;
 }
 p {padding: 0;}
 img {
