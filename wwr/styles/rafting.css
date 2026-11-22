@@ -3,7 +3,7 @@
   --primary-color: #0b5d7a;   /* river blue */
   --secondary-color: #f4a261; /* warm sand */
   --accent1-color: #264653;   /* dark slate blue */
-  --accent2-color: #e9c46a;   /* light golden yellow */
+  --accent2-color: #3e4d3b;   /* light golden yellow */
   --heading-font: "Georgia", "Times New Roman", serif;
   --body-font: Arial, Helvetica, sans-serif;
 }
@@ -58,7 +58,7 @@ header nav ul {
 }
 
 header nav a {
-  color: var(--accent2-color);
+  color: white;
   text-decoration: none;
   font-weight: bold;
 }
