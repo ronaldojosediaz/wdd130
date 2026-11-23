@@ -93,7 +93,7 @@ h1 {
   width: 100%;
   padding: 16px;
   text-align: center;
-  background-color: #264653b3;
+  background-color: #264653b3; 
   color: #fff;
 }
 
@@ -168,7 +168,6 @@ section h2 {
   margin-top: 6px;
   font-size: 0.85rem;
   text-align: center;
-  color: var(--accent2-color);
 }
 
 
