@@ -36,35 +36,45 @@ nav, p, section, article {
   padding: 8px;
 }
 
-/* ===== Header ===== */
+/* ===== Header (Grid) ===== */
 header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
   align-items: center;
-  justify-content: space-between;
+  justify-items: center;
   background-color: var(--primary-color);
-  color: var(--accent2-color);
+  color: #fff;
 }
 
 header img {
   height: 60px;
   width: auto;
   display: block;
+  margin: 8px 16px;
 }
 
-header nav ul {
-  list-style: none;
+/* ===== Nav (Flex) ===== */
+header nav {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  gap: 0;
 }
 
 header nav a {
-  color: white;
+  color: var(--accent1-color);
+  background-color: #fff;
+  border: 1px solid var(--accent1-color);
+  padding: 8px 18px;
   text-decoration: none;
   font-weight: bold;
 }
 
+header nav a:not(:last-child) {
+  border-right: none; /* evita el borde doble entre botones */
+}
+
 header nav a:hover {
-  text-decoration: underline;
+  background-color: var(--secondary-color);
 }
 
 /* ===== Hero ===== */
@@ -84,8 +94,7 @@ h1 {
   width: 100%;
   padding: 16px;
   text-align: center;
-  opacity: 0.7;
-  background-color: var(--accent1-color);
+  background-color: rgba(38, 70, 83, 0.7); /* fondo translúcido, el texto queda 100% blanco */
   color: #fff;
 }
 
@@ -110,20 +119,69 @@ h1 {
 }
 
 /* ===== Sections ===== */
+section {
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+
 section h2 {
+  text-align: center;
   margin-bottom: 8px;
+}
+
+/* ===== History (3 columnas: texto | imagen | texto) ===== */
+.history {
+  display: grid;
+  grid-template-columns: 2fr 1.5fr 2fr;
+  gap: 16px;
+  align-items: center;
+}
+
+.history h2 {
+  grid-column: 1 / -1; /* el título ocupa todo el ancho arriba */
+}
+
+.history img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ===== Adventures (5 imágenes en fila) ===== */
+.adventure-gallery {
+  display: flex;
+  justify-content: space-around;
+}
+
+.adventure-gallery figure {
+  width: 120px;
+}
+
+.adventure-gallery img {
+  display: block;
+  width: 100%;
+  height: 110px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.adventure-gallery figcaption {
+  margin-top: 6px;
+  font-size: 0.85rem;
+  text-align: center;
 }
 
 /* ===== Footer ===== */
 footer {
+  display: flex;
+  justify-content: space-between; /* copyright a la izquierda, redes a la derecha */
+  align-items: center;
   background-color: var(--accent1-color);
   color: #fff;
-  text-align: center;
 }
 
 .socialmedia {
   display: flex;
-  justify-content: center;
   gap: 16px;
 }
 
